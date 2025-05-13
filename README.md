@@ -1,1 +1,1 @@
-<li><a href="pages\index.html"></a></li>
+<a href="pages\index.html">Курсач</a>
