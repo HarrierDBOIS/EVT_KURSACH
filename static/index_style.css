@@ -1,0 +1,421 @@
+
+/* Hero */
+.hero {
+  color : white;
+  padding: 80px 40px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),url("../img/hero.jpg") no-repeat center/cover;;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #0d253f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #00bcd4;
+
+}
+/* Sections */
+.section {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.section p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.all-services-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0d253f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  margin-top: 40px;
+  margin-bottom: 20px ;
+}
+
+.features,
+.cases,
+.service-list,
+.carousel-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-color: #14385e;
+  padding: 40px 40px;
+}
+
+/* Карточки преимуществ и кейсов */
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0d253f;
+}
+
+/* Карточки услуг */
+.service-card {
+  background-color: #fff;
+  padding: 24px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.case-card {
+  background-color: #fff;
+  padding: 24px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #0d253f;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.details-button {
+  align-self: flex-start;
+  margin-top: auto;
+  color: #0d253f;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.details-button:hover {
+  color: #00bcd4;
+  transform: translateX(4px);
+}
+
+/* Контакты */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 16px;  
+  background-color: #0d253f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact {    
+  color: white;
+  background: url("../img/01.jpeg") no-repeat center/cover;
+}
+
+/* Адаптив */
+
+
+/* От 381px до 768px — две колонки */
+
+/* Карусель */
+.testimonial-carousel {
+
+  text-align: center;
+  /* Центрирование текста внутри */
+  position: relative;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  /* Максимальная ширина для отзывов */
+  height: 200px;
+  /* Высота блока */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.testimonial-slide {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* Устанавливаем левую границу в 50% */
+  transform: translateX(-50%);
+  /* Сдвигаем налево на 50% от ширины */
+  width: 80%;
+  /* Ширина слайда */
+  height: 100%;
+  opacity: 0;
+  background-color: white;
+  transition: opacity 0.5s ease-in-out;
+  padding: 0px;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  /* Активный слайд становится видимым */
+}
+
+.testimonial-slide p {
+  margin-top: 0px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-slide h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.carousel-controls button {
+  border: none; /* Убираем рамку */
+  font-size: 18px; /* Размер шрифта */
+  padding: 10px; /* Внутренние отступы */
+  cursor: pointer; /* Курсор при наведении */
+  color: white; /* Цвет стрелок */
+  background-color: none; /* Темно-синий фон */
+  border-radius: 50%; /* Круглая форма */
+  transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+  width: 40px; /* Ширина кнопки */
+  height: 40px; /* Высота кнопки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 60%;
+}
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.carousel-controls button:hover {
+ /* Голубой фон при наведении */
+  transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.carousel-wrapper h2{
+  color: white;
+}
+
+.prev-btn::before, .next-btn::before {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.prev-btn {
+  font-size: 24px;
+}
+
+.next-btn {
+  font-size: 24px;
+}
+
+.prev-btn::before {
+  content: '<'; /* Стрелка влево */
+}
+
+.next-btn::before {
+  content: '>'; /* Стрелка вправо */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* затемнение фона */
+}
+
+/* Контент внутри модального окна */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка закрытия */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .features,
+  .cases,
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .service-card,
+  .case-card {
+    width: 85%;
+    max-width: 100%;
+  }
+
+  .testimonial-slide p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-slide h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+}
+
+@media (min-width: 381px) and (max-width: 768px) {
+
+  .features,
+  .cases,
+  .service-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card,
+  .service-card,
+  .case-card {
+    min-width: 230px;
+    padding: 20px;
+    width: 70%;
+    box-sizing: border-box;
+  }
+
+  .testimonial {
+    flex: 0 0 auto !important;
+  }
+}
+
+/* Свыше 768px — три колонки (оставляем как есть или корректируем, если нужно) */
+@media (min-width: 768px) {
+
+  .card,
+  .service-card,
+  .case-card {
+    width: 25%;
+    min-width: 370px;
+    /* Или 32%, если хочешь адаптивную ширину */
+  }
+}

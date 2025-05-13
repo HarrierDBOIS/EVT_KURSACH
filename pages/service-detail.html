@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Подробнее об услуге | SecureConsult</title>
+  <link rel="stylesheet" href="../static/style.css" >
+  <style>
+    .detail-container {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    .detail-header {
+      margin-bottom: 30px;
+    }
+
+    .detail-header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .detail-header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .detail-content {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .detail-content ul {
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    .detail-content li {
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #0d253f;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .back-link:hover {
+      border-color: #0d253f;
+    }
+
+    @media (max-width: 768px) {
+      .detail-container h1 {
+        font-size: 24px;
+      }
+
+      .detail-content {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .detail-container h1 {
+        font-size: 20px;
+      }
+
+      .detail-content {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+  <header>
+    <div class="logo"><a href="index.html">IB Consulting</a></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitcher">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="detail-container">
+    <div class="detail-header">
+      <h1>Аудит информационной безопасности</h1>
+      <p>Полный анализ текущего состояния ИБ в вашей компании</p>
+    </div>
+
+    <div class="detail-content">
+      <p>Наш аудит включает в себя:</p>
+      <ul>
+        <li>Идентификацию уязвимостей в системах и процессах</li>
+        <li>Оценку соблюдения требований законодательства (152-ФЗ, ГОСТ, ISO/IEC и др.)</li>
+        <li>Ревизию политики доступа, резервного копирования, защиты данных</li>
+        <li>Тестирование защиты от внутренних и внешних угроз</li>
+        <li>Рекомендации по улучшению безопасности и снижению рисков</li>
+      </ul>
+
+      <p>Мы предоставим вам детальный отчёт с выводами и конкретным планом действий для улучшения уровня
+        информационной безопасности в вашей компании.</p>
+
+      <a href="services.html" class="back-link">← Вернуться к списку услуг</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 SecureConsult. Все права защищены.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("show");
+    }
+  </script>
+  <script src="../scripts/dark.js"></script>
+</div>
+</body>
+
+</html>

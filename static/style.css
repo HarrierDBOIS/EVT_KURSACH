@@ -1,0 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* для небольших отступов от краёв */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #eaeaea;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #0d253f;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header nav a:hover {
+  color: #00bcd4;
+}
+
+.logo a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0d253f;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  margin-top: 60px;
+}
+
+/* --- Переключатель темы --- */
+.theme-toggle {
+  top: 15px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+/* --- Темы --- */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-theme .icon svg{
+  stroke: #e0e0e0;
+}
+
+body.dark-theme .service-card {
+  border: #ffffff solid 1px;
+}
+
+body.dark-theme .back-link:hover {
+  border-color: #ffffff;
+}
+
+body.dark-theme #navbar,
+body.dark-theme .service-list,
+body.dark-theme .carousel-wrapper,
+body.dark-theme header,
+body.dark-theme footer{
+  background-color: #171717;
+}
+
+body.dark-theme .testimonial-carousel,
+body.dark-theme .testimonial-slide,
+body.dark-theme .testimonial-slide p,
+body.dark-theme .details-button,
+body.dark-theme .section,
+body.dark-theme .hero,
+body.dark-theme .testimonial-section,
+body.dark-theme .service-card,
+body.dark-theme .service-card h3,
+body.dark-theme .detail-container.detail-header,
+body.dark-theme .detail-container p,
+body.dark-theme .detail-content,
+body.dark-theme .back-link,
+body.dark-theme .case-card,
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea,
+body.dark-theme .modal-content {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+  color: #aaaaaa;
+}
+
+body.dark-theme .button,
+body.dark-theme .all-services-button,
+body.dark-theme .contact-form button,
+body.dark-theme .carousel-controls button {
+  background-color: none;
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    background: #0d253f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+    gap: 10px;
+    transition: max-height 1s ease, opacity 1s ease;
+    opacity: 0;
+  }
+
+  nav.show {
+    max-height: 100px;
+    opacity: 1;
+  }
+
+}

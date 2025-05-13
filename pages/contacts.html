@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Контакты | SecureConsult</title>
+  <link rel="stylesheet" href="../static/contacts_style.css" >
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+  <header>
+    <div class="logo"><a href="index.html">IB Consulting</a></div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav id="navbar">
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitcher">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-info">
+      <p><a class="address" href="https://yandex.ru/maps/?text=Москва,+Новинский+бульвар,+8" target="_blank">
+          г. Москва, Новинский бульвар, д. 8
+        </a></p>
+      <p><a class="telephone" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+      <p><strong>Email:</strong> info@secureconsult.ru</p>
+      <h2>Наш офис</h2>
+    </section>
+
+    <div class="map-wrapper">
+      <div id="map" class="map"></div>
+      <div id="map-error"
+        style="display: none; padding: 20px; background: #ffe0e0; color: #900; text-align: center;">
+        Не удалось загрузить карту. Проверьте подключение к интернету.
+      </div>
+    </div>
+
+    <section class="contact-wrapper">
+      <h2>Свяжитесь с нами</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш email" required>
+        <textarea rows="5" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 SecureConsult. Все права защищены.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("show");
+    }
+  </script>
+
+  <!-- Яндекс Карта -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="../scripts/contacts_script.js"></script>
+  <script src="../scripts/dark.js"></script>
+</div>
+</body>
+
+</html>
